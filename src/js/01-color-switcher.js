@@ -1,5 +1,4 @@
 const startBtn = document.querySelector('[data-start');
-const stopBtn = document.querySelector('[data-stop');
 
 let interval;
 
@@ -16,11 +15,3 @@ const start = () => {
     startBtn.disabled = true;
     interval = setInterval(changeColor, 1000)
 };
-
-const stop = () => {
-    clearInterval(interval);
-    startBtn.disabled = false;
-}
-
-startBtn.addEventListener('click', start);
-stopBtn.addEventListener('click', stop);
